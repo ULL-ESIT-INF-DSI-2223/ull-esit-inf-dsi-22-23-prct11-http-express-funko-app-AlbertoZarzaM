@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import 'mocha';
-import { Funko, Genero, Tipo } from '../../src/ejercicio3/Funko.js';
+import { Funko, Genero, Tipo } from '../../src/ejercicio1/Funko.js';
 
 
 describe('Funko', () => {

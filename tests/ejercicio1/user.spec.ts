@@ -1,7 +1,7 @@
 import 'mocha';
 import {expect} from 'chai';
-import {User} from '../../src/ejercicio3/User.js'
-import { FunkoCollection } from '../../src/ejercicio3/FunkoCollection.js';
+import {User} from '../../src/ejercicio1/User.js'
+import { FunkoCollection } from '../../src/ejercicio1/FunkoCollection.js';
 
 describe('User', () => {
 
