@@ -293,7 +293,7 @@ export const updateFunko = (user: string, idfunko: number, nombre: string, descr
 
 
 /**
- * 
+ * Servidor Express que gestiona las peticiones
  * Gestion de la ruta /funko
  * 
  * @param req  Petición
