@@ -1,7 +1,8 @@
 import { expect } from 'chai';
 import 'mocha';
 import { Funko, Tipo, Genero } from '../../src/ejercicio1/Funko.js';
-import { addFunko, readFunko, listFunko, deleteFunko, updateFunko } from '../../src/ejercicio1/expressServer.js';
+import { addFunko, readFunko, listFunko, deleteFunko, updateFunko } from '../../src/ejercicio1/funciones.js';
+import { UserCollection } from '../../src/ejercicio1/UserCollection.js';
 
 const funko = new Funko(
   2,
@@ -16,10 +17,11 @@ const funko = new Funko(
   100
 )
 
+const users = new UserCollection();
 
 describe('expressServer asynchoronous functions test', () => {
   it ('should list a Funko', (done) => {
-    listFunko('pepe', (_, data) => {
+    listFunko('pepe', users, (_, data) => {
       if (data) {
         expect(data.success).to.be.equal(true);
         done();
@@ -27,7 +29,7 @@ describe('expressServer asynchoronous functions test', () => {
     });
   });
   it ('shouldn\'t list a Funko', (done) => {
-    listFunko('test', (error, _) => {
+    listFunko('test',users,(error, _) => {
       if (error) {
         expect(error.success).to.be.equal(false);
         done();
@@ -36,7 +38,7 @@ describe('expressServer asynchoronous functions test', () => {
   });
 
   it ('should read a Funko', (done) => {
-    readFunko('pepe', 1, (_, data) => {
+    readFunko('pepe', 1,users, (_, data) => {
       if (data) {
         expect(data.success).to.be.equal(true);
         done();
@@ -44,7 +46,7 @@ describe('expressServer asynchoronous functions test', () => {
     });
   });
   it ('shouldn\'t read a Funko', (done) => {
-    readFunko('test', 1, (error, _) => {
+    readFunko('test', 1,users, (error, _) => {
       if (error) {
         expect(error.success).to.be.equal(false);
         done();
