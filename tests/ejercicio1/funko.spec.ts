@@ -2,7 +2,6 @@ import { expect } from 'chai';
 import 'mocha';
 import { Funko, Genero, Tipo } from '../../src/ejercicio1/Funko.js';
 
-
 describe('Funko', () => {
 
   it('should create a Funko', () => {
