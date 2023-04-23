@@ -6,7 +6,6 @@ import {  listFunko, readFunko, addFunko, deleteFunko, updateFunko } from "./fun
 const users = new UserCollection();
 
 const app = express();
-
 /**
  * Servidor Express que gestiona las peticiones
  * Gestion de la ruta /funko
